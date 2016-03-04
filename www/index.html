@@ -1,305 +1,89 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
-		<meta name="apple-mobile-web-app-status-bar-style" content="yes">
-		<meta name="theme-color" content="#2196f3"><!-- Color theme for statusbar -->
-		<title>MoiGorod</title><!-- Your app title -->	
-		<!-- Path to Framework7 Library CSS-->
-		<link rel="stylesheet" href="css/framework7.material.min.css"><!-- <link rel="stylesheet" href="css/framework7.ios.min.css"> -->
-		<link rel="stylesheet" href="css/framework7.material.colors.min.css"><!-- Path to Framework7 color related styles, Material Theme -->
-		<link rel="stylesheet" href="css/my-app.css"><!-- Path to your custom app styles-->
-	</head>
-<body class="theme-cyan">
-
-<!-- First, we need to add Panel's overlay that will overlays app while panel is opened -->
-<div class="panel-overlay"></div>
-
-<!-- Left panel with cover effect-->
-<div class="panel panel-left panel-cover">
-	<div class="list-block">
-		<div class="list-group">
-			<ul>
-				<!-- <a href="index.html" class="back close-panel" data-force="true">
-				<li class="item-content list-panel-all close-panel item-link">
-				<div class="item-media"><i class="icon icon-home-black"></i></div>
-					<div class="item-inner">
-						<div class="item-title">На главную</div>
-					</div>
-				</li>
-				</a> -->
-				
-				<a href="sendnews.html">
-				<li class="item-content list-panel-addnews close-panel item-link">
-				<div class="item-media"><i class="icon icon-noteadd-black"></i></div>
-					<div class="item-inner">
-						<div class="item-title">Отправить новость</div>
-					</div>
-				</li>
-				</a>
-					
-				<!-- <a href="#">
-				<li class="item-content list-panel-all close-panel item-link">
-				<div class="item-media"><i class="icon icon-folder-open-black"></i></div>
-					<div class="item-inner">
-						<div class="item-title">Материалы</div>
-					</div>
-				</li>
-				</a> -->
-				
-				
-				<!--<a href="#">
-				<li class="item-content list-panel-favorites close-panel item-link">
-				<div class="item-media"><i class="icon icon-folder-special-black"></i></div>
-					<div class="item-inner">
-						<div class="item-title">Избранное</div>
-					</div>
-				</li>
-				</a> -->
-				
-				<!-- <a href="#">
-				<li class="item-content list-panel-settings close-panel item-link">
-				<div class="item-media"><i class="icon icon-settings-black"></i></div>
-					<div class="item-inner">
-						<div class="item-title">Настройки</div>
-					</div>
-				</li>
-				</a> -->
-				
-				<a href="sendcomment.html">
-				<li class="item-content list-panel-addnews close-panel item-link">
-				<div class="item-media"><i class="icon icon-comment-black"></i></div>
-					<div class="item-inner">
-						<div class="item-title">Отправить отзыв</div>
-					</div>
-				</li>
-				</a>
-				
-				<a href="about.html">
-				<li class="item-content list-panel-about close-panel item-link">
-				<div class="item-media"><i class="icon icon-info-black"></i></div>
-					<div class="item-inner">
-						<div class="item-title">О проекте</div>
-					</div>
-				</li>
-				</a>
-						
-				<a href="#">
-				<li class="item-content close-panel">
-				<div class="item-media"><i class="icon icon-close-black"></i></div>
-					<div class="item-inner">
-						<div class="item-title">Закрыть панель</div>
-					</div>
-				</li>
-				</a>
-				
-			</ul>
-		</div>
-	</div>
-</div>
-  
-
-<div class="views"> <!-- Views-->
-	<div class="view view-main"> <!-- Your main view, should have "view-main" class-->
-
-		<div class="pages navbar-fixed">
-			<div data-page="home" class="page toolbar-fixed navbar-fixed" data-ptr-distance="2">
-				
-					<div class="navbar pull-to-refresh-content">
-								<div class="pull-to-refresh-layer"><!-- Default pull to refresh layer-->
-									<div class="preloader"></div>
-									<div class="pull-to-refresh-arrow"></div>
-								</div><!-- Default pull to refresh layer-->
-						<div class="navbar-inner">
-							<div class="left"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
-							<div class="center">MoiGorod</div>
-							<div class="right icon">
-								<!-- <a class="link icon-only" onclick="window.plugins.socialsharing.share(null, null, null,  'http://www.moigorod.ru/m/')" href="#" > <i class="icon icon-share" > </i></a>  -->
-								<a class="link icon-only" href="sendnews.html" > <i class="icon icon-noteadd-white" > </i></a>
-								<a class="link icon-only" onclick="window.location.href = 'tel: +74212666777'; " href="#" > <i class="icon icon-phonecall" > </i></a>
-							</div>				
-						</div>
-					</div> <!-- navbar -->
-					<div class="toolbar tabbar">
-						<div class="toolbar-inner">
-							<!-- <a style="color: black; background:red" href="#tab1" class="active tab-link">Новости</a> -->
-							<a href="#tab1" class="active tab-link">Новости</a>
-							<!-- <a href="#tab2" class="tab-link">Скидки</a> -->
-							<a href="#tab3" class="tab-link">Кино</a>
-							<a href="#tab4" class="tab-link">События</a>
-							<a href="#tab5" class="tab-link">Валюты</a> 
-						</div>
-					</div><!-- toolbar -->
-					
-
-					<div class="tabs-swipeable-wrap">
-						<div class="tabs ">
-						
-							<div id="tab1" class="page-content tab active ">
-								<div class="content-block">
-									<h3>Новости</h3>
-									<div class="list-block news-list">
-										<ul>
-										</ul>
-									</div> 
-								</div>
-							</div>
-<!-- 							<div id="tab2" class="page-content tab pull-to-refresh-content">
-								<div class="content-block">
-									<h3>Скидки</h3>
-									<div class="list-block sale-list">
-										<ul>
-										</ul>
-									</div> 
-								</div>
-							</div> -->
-							<div id="tab3" class="page-content tab pull-to-refresh-content">
-								<div class="content-block">
-									<h3>Кино</h3>
-									<div class="list-block cinema-list">
-										<ul>
-										</ul>
-									</div> 
-								</div>
-							</div>
-							<div id="tab4" class="page-content tab pull-to-refresh-content">
-							<div class="content-block">
-									<h3>События</h3>
-									<div class="list-block events-list">
-										<ul>
-										</ul>
-									</div> 
-								</div>
-							</div>
-							<div id="tab5" class="page-content tab pull-to-refresh-content">
-								<div class="content-block">
-									<h3>Валюты</h3>
-									<div class="list-block currency-list">
-										<ul>
-										</ul>
-									</div>
-								</div> 
-							</div>
-						</div> <!-- tabs -->
-					</div> <!-- tabs-swipable-wrap -->
-			</div><!-- data-page="home" class="page toolbar-fixed navbar-fixed" -->
-		</div> <!-- pages navbar-fixed -->
-	</div><!-- Your main view, should have "view-main" class-->
-</div><!-- Views-->
-
-<script id="news-template" type="text/template">
-{{#each news.all.posts}}
-	<li>
-		<a href="post.html" class="item-content item-link no-ripple" data-context-name="news.all.posts.{{@index}}">
-			<div class="item-media"><img src="{{imgurl}}" width="60"></div>
-			<div class="item-inner">
-				<div class="item-title-row">
-					<div class="itempic-text">{{title}}</div>
-					<div class="itempic-subtitle">{{pubDate}}</div>
-				</div>
-			</div>
-		</a>
-	</li>
-{{/each}}
-</script>	
-
-<script id="sale-template" type="text/template">
-{{#each sale.all.posts}}
-	<li>
-		<a href="post.html" class="item-content item-link no-ripple" data-context-name="sale.all.posts.{{@index}}">
-			<div class="item-media"><img src="{{imgurl}}" width="60"></div>
-			<div class="item-inner">
-				<div class="item-title-row">
-					<div class="itempic-text">{{title}}</div>
-					<div class="itempic-subtitle">{{pubDate}}</div>
-				</div>
-			</div>
-		</a>
-	</li>
-{{/each}}
-</script>
-
-<script id="cinema-template" type="text/template">
-{{#each cinema.all.posts}}
-	<li>
-		<a href="post.html" class="item-content item-link no-ripple" data-context-name="cinema.all.posts.{{@index}}">
-			<div class="item-media"><img src="{{imgurl}}" width="60"></div>
-			<div class="item-inner">
-				<div class="item-title-row">
-					<div class="itempic-text">{{title}}</div>
-					<div class="itempic-subtitle">{{description}}</div>
-				</div>
-			</div>
-		</a>
-	</li>
-{{/each}}
-</script>
-
-<script id="events-template" type="text/template">
-{{#each events.all.posts}}
-	<li>
-		<a href="post.html" class="item-content item-link no-ripple" data-context-name="events.all.posts.{{@index}}">
-			<div class="item-media"><img src="{{imgurl}}" width="60"></div>
-			<div class="item-inner">
-				<div class="item-title-row">
-				<div class="item-title">{{eventDate}}</div>
-					<div class="itempic-text">{{description}}</div>
-					<div class="itempic-subtitle">{{shortTitle}}</div>
-				</div>
-			</div>
-		</a>
-	</li>
-{{/each}}
-</script>			
-
-<script id="currency-template" type="text/template">
-	{{#each currency.all.posts}}
-	{{content}}
-	{{/each}}
-</script>									
-<!-- End of Templates-->									
-
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="cordova_plugins.js"></script>
-<script type="text/javascript" src="js/SocialSharing.js"></script>
-
-<script type="text/javascript" src="js/framework7.min.js"></script>
-<script type="text/javascript" src="js/my-app.js"></script>
-				
-<div class="popup popup-services">
-	<div class="content-block-title">
-		<h1>Условия заказа</h1>
-	</div>		 
-	<div class="content-block">
-		<p><a href="#" class="close-popup">Закрыть</a></p>
-		<div class="content-block-inner">
-			<p>Обработка заказов осуществляется с ежедневно с 10:00 до 19:00.</p>
-			<p>Доставка осуществляется (пн, ср, пт) с 15:00-18:00; (либо время доставки оговарвивается с оператором). Заказы, сделанные в нерабочие дни, доставляются в первый рабочий.</p>
-			<p>Стоимость доставки: от 100 руб.</p>
-			<p>Ориентировочная стоимость:</p>
-			<ul>
-			<li>Центральный район — 100 руб.</li>
-			<li>1 мкр-н, ДОС, Большая, Казачья гора, Лазо- 150 руб.</li>
-			<li>Южный микрорайон (до Стройки), Северный микрорайон, Выборгская,  п.Горький — 200 руб.</li>
-			</ul>
-			<p>Точную стоимость доставки указывает оператор. Оплата производится наличными.</p>
-			<p>При доставке товара и отказе от покупки по любым причинам взимается стоимость доставки, установленная оператором.
-			При отмене концерта билеты возвращаются в кассу, указанную организатором концерта, деньги за доставку не возвращаются.</p>
-			
-			<h3>Соглашение об обработке персональных данных.</h3>
-			<p>Данное соглашение об обработке персональных данных разработано в соответствии с законодательством Российской Федерации.</p>
-			<p>Все лица, заполнившие сведения составляющие персональные данные на данном сайте, а также разместившие иную информацию обозначенными действиями подтверждают свое согласие на обработку персональных данных и их передачу оператору обработки персональных данных.</p>
-			<p>Под персональными данными Гражданина понимается нижеуказанная анкетная информация: общая информация (Ф.И.О.), телефон, адрес электронной почты, адрес доставки.</p>
-			<p>Персональные данные направляются оператору в целях предоставления последним услуги доставки.</p>
-			<p>Гражданин, принимая настоящее Соглашение, выражают свою заинтересованность и полное согласие, что обработка их персональных данных может включать в себя следующие действия: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, уничтожение.</p>
-			<p>Гражданин гарантирует: информация, им предоставленная, является полной, точной и достоверной; при предоставлении информации не нарушается действующее законодательство Российской Федерации, законные права и интересы третьих лиц; вся предоставленная информация заполнена Гражданина в отношении себя лично.</p>
-		</div>
-		<p><a href="#" class="close-popup">Закрыть</a></p>
-	</div>
-</div>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Framework7 Feeds</title>
+    <link rel="stylesheet" href="libs/framework7/dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="libs/framework7/dist/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="dist/framework7.feeds.css">
+  </head>
+  <body>
+    <div class="statusbar-overlay"></div>
+    <div class="views">
+      <div class="view view-main">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Feeds</div>
+            <div class="right"><a href="#" class="link icon-only open-panel"><i class="icon icon-bars-blue"></i></a></div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through">
+          <div data-page="index" class="page">
+            <div class="page-content">
+              <div class="content-block-title">Economic News RSS Prototype App</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p>Prototype App.</p>
+                </div>
+              </div>
+              <div class="content-block-title">News Feeds</div>
+              <div class="list-block">
+                <ul>
+				  <li>
+                    <a href="rt.html" class="item-content item-link">
+                      <div class="item-inner">
+                        <div class="item-title">Reuters</div>
+                      </div>
+                    </a>
+                  </li>
+<!--                   <li>
+                    <a href="apple.html" class="item-content item-link">
+                      <div class="item-inner">
+                        <div class="item-title">Apple News</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="bbc.html" class="item-content item-link">
+                      <div class="item-inner">
+                        <div class="item-title">BBC News</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="techcrunch.html" class="item-content item-link">
+                      <div class="item-inner">
+                        <div class="item-title">TechCrunch News</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="ign.html" class="item-content item-link">
+                      <div class="item-inner">
+                        <div class="item-title">IGN Feed</div>
+                      </div>
+                    </a>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="libs/framework7/dist/js/framework7.min.js"></script>
+    <script src="dist/framework7.feeds.min.js"></script>
+    <script>
+      var myApp = new Framework7({
+        externalLinks: 'a.external, .feeds-page .content-block a',
+        animateNavBackIcon: true
+      });
+      var mainView = myApp.addView('.view-main', {
+        dynamicNavbar: true
+      });
+    </script>
+  </body>
 </html>

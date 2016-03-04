@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Framework7 Feeds</title>
+    <link rel="stylesheet" href="libs/framework7/dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="libs/framework7/dist/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../dist/framework7.feeds.css">
+  </head>
+  <body>
+    <div class="statusbar-overlay"></div>
+    <div class="views">
+      <div class="view view-main">
+
+	  <div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="#" class="link back"><i class="icon icon-back"></i><span>Feeds</span></a></div>
+    <div class="center sliding">Financial Times Hot News</div>
+  </div>
+</div>
+
+<div data-page="apple-news" class="page">
+  <div class="page-content pull-to-refresh-content">
+    <div class="pull-to-refresh-layer">
+        <div class="preloader"></div>
+        <div class="pull-to-refresh-arrow"></div>
+    </div>
+    <!-- <div data-url="http://27podarkov.ru/economicnews/proxy.php?url=http://images.apple.com/main/rss/hotnews/hotnews.rss" class="list-block feeds-init"> -->
+    <!-- <div data-url="proxy.php?url=http://www.ft.com/rss/home/uk" class="list-block feeds-init"> -->
+    <div data-url="http://27podarkov.ru/economicnews/proxy.php?url=http://www.reuters.com/rssFeed/newIssuesNews" class="list-block feeds-init">
+      <div style="text-align:center" class="content-block-inner">
+        <span class="preloader"></span>
+      </div>
+    </div>
+  </div>
+</div>
+	  
+      </div>
+    </div>
+    <script src="libs/framework7/dist/js/framework7.min.js"></script>
+    <script src="../dist/framework7.feeds.min.js"></script>
+    <script>
+      var myApp = new Framework7({
+        externalLinks: 'a.external, .feeds-page .content-block a',
+        animateNavBackIcon: true
+      });
+      var mainView = myApp.addView('.view-main', {
+        dynamicNavbar: true
+      });
+    </script>
+  </body>
+</html>

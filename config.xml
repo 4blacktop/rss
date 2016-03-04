@@ -1,6 +1,6 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="ru.vladimirklochkov.mg" version="1.1.5">
-  <name>MoiGorod</name>
-  <description>Мобильное приложение Moigorod</description>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="ru.vladimirklochkov.economicnews" version="0.0.3">
+  <name>Economic News</name>
+  <description>Economic News</description>
   <author href="http://vladimirklochkov.ru" email="4blogga@gmail.com">Vladimir Klochkov</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
